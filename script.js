@@ -138,7 +138,7 @@ const displayMovements = function (acc, sort = false) {
     const displayDate = formatMovementDate(date, acc.locale);
     const formattedMov = formatCur(mov.value, acc.locale, acc.currency);
 
-    const giftMessage = mov.value === 100 ? "🎁 Gift given!" : "";
+    const giftMessage = mov.value === 100 && i === 0 ? "🎁 Gift given!" : "";
 
     const html = `
       <div class="movements__row">
